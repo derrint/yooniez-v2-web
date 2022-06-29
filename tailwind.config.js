@@ -15,17 +15,16 @@ module.exports = {
     // },
     fontFamily: {
       sans: ['Work Sans'],
-      headline: ['Russo One'],
-      script: ['Caveat'],
+      headline: ['Made GoodTime Grotesk'],
     },
     extend: {
       colors: {
-        primary: '#500D8C',
+        primary: '#9100F4',
         'primary-light': '#A100FF',
         'primary-dark': '#20003D',
-        secondary: '#61FAE3',
+        secondary: '#F9EB21',
         'secondary-dark': '#002520',
-        tertiary: '#EEE560',
+        tertiary: '#D91521',
         'tertiary-dark': '#242200',
         black: '#111111',
         // gray: '#888888',

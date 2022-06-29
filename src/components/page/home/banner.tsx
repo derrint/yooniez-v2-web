@@ -57,7 +57,7 @@ const Banner = () => {
                 }}
               />
               <h3
-                className="text-lg font-bold font-script text-secondary tracking-tighter"
+                className="text-lg font-bold font-headline text-secondary tracking-tighter"
                 style={{
                   transform: 'rotate(-7.06deg)',
                 }}

@@ -34,7 +34,7 @@ const About = () => {
           <div>
             <Fade left duration={750} delay={0} when={state.isReady}>
               <div className="text-center">
-                <h3 className="text-xl sm:text-2xl lg:text-5xl font-bold mb-3 lg:mb-5 text-secondary font-script tracking-tighter">
+                <h3 className="text-xl sm:text-2xl lg:text-5xl font-bold mb-3 lg:mb-5 text-secondary font-headline tracking-tighter">
                   About
                 </h3>
 

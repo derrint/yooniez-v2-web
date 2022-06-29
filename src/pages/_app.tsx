@@ -10,6 +10,7 @@ import { Header } from '@templates/Header';
 import { AppConfig } from '@utils/AppConfig';
 
 import '@styles/global.css';
+import '@styles/index.scss';
 
 const config: Config = {
   readOnlyChainId: Mainnet.chainId,

@@ -3,15 +3,14 @@ import React from 'react';
 
 import { useEthers } from '@usedapp/core';
 // import Link from 'next/link';
-import { FaDiscord, FaInstagram, FaTwitter } from 'react-icons/fa';
-import { FiArrowRight } from 'react-icons/fi';
+// import { FiArrowRight } from 'react-icons/fi';
 import { Fade } from 'react-reveal';
 
 import { Background } from '@components/background';
 // import { DropdownMenu } from '@components/dropdown';
 import { Section } from '@components/layout';
 import { Modal } from '@components/modal';
-import { NavbarThreeColumns } from '@components/navigation/index';
+import { NavbarTwoColumns } from '@components/navigation/index';
 // import { menus } from '@data/index';
 import { useActions, useState } from '@overmind/index';
 
@@ -79,34 +78,34 @@ const Header = () => {
       <Fade top duration={750} delay={0} when={state.isReady}>
         <Section
           yPadding="py-5 pb-6"
-          className={`relative mt-8 lg:!px-8 rounded-full transition-colors duration-500 ${
-            isScrolled ? 'bg-white shadow-xl' : ''
+          className={`header-section relative lg:!px-8 transition-colors duration-500 ${
+            isScrolled ? 'bg-primary' : ''
           }`}
           isHeader
         >
-          <NavbarThreeColumns
+          <NavbarTwoColumns
             logo={
               <img
-                src="/assets/images/logos/logo-yooniez.svg"
+                src="/assets/images/logos/logo-yooniez-w.svg"
                 alt=""
-                className={`h-8 aspect-auto transition-opacity duration-300 ${
-                  isScrolled ? '' : 'hidden'
+                className={`h-4 aspect-auto transition-opacity duration-300 ${
+                  isScrolled ? '' : ''
                 }`}
               />
             }
-            leftComponent={
-              <div className="pt-1 flex items-center gap-5">
-                <div className={isScrolled ? 'text-primary' : 'text-white'}>
-                  <FaDiscord size={18} />
-                </div>
-                <div className={isScrolled ? 'text-primary' : 'text-white'}>
-                  <FaInstagram size={18} />
-                </div>
-                <div className={isScrolled ? 'text-primary' : 'text-white'}>
-                  <FaTwitter size={18} />
-                </div>
-              </div>
-            }
+            // leftComponent={
+            //   <div className="pt-1 flex items-center gap-5">
+            //     <div className={isScrolled ? 'text-primary' : 'text-white'}>
+            //       <FaDiscord size={18} />
+            //     </div>
+            //     <div className={isScrolled ? 'text-primary' : 'text-white'}>
+            //       <FaInstagram size={18} />
+            //     </div>
+            //     <div className={isScrolled ? 'text-primary' : 'text-white'}>
+            //       <FaTwitter size={18} />
+            //     </div>
+            //   </div>
+            // }
           >
             {/* {menus.map(
               ({
@@ -154,10 +153,10 @@ const Header = () => {
               <button
                 className="
                   flex gap-2
-                  px-5 py-3
-                  rounded-full shadow-lg bg-white
-                  border-x border-y border-black
-                  text-base font-bold text-black
+                  px-3 py-1
+                  bg-secondary
+                  text-base text-primary
+                  font-headline
                 "
                 onClick={() => {
                   if (!account) {
@@ -165,11 +164,6 @@ const Header = () => {
                   }
                 }}
               >
-                <img
-                  src="/assets/images/logos/logo-metamask.svg"
-                  alt=""
-                  className="h-[22px] aspect-auto"
-                />
                 {account ? (
                   <>
                     {account &&
@@ -180,11 +174,11 @@ const Header = () => {
                     ETH
                   </>
                 ) : (
-                  'Connect Wallet'
+                  'CONNECT WALLET'
                 )}
               </button>
             </li>
-            <li
+            {/* <li
               className={`transition-opacity duration-500 ${
                 isScrolled ? '' : 'hidden'
               }`}
@@ -208,8 +202,8 @@ const Header = () => {
                 Enter Labyrinth
                 <FiArrowRight size={18} />
               </button>
-            </li>
-          </NavbarThreeColumns>
+            </li> */}
+          </NavbarTwoColumns>
         </Section>
       </Fade>
 

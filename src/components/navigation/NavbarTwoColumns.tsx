@@ -2,7 +2,6 @@ import { ReactNode } from 'react';
 
 import Link from 'next/link';
 import Router from 'next/router';
-import { FaDiscord, FaInstagram, FaTwitter } from 'react-icons/fa';
 
 import { DropdownMenu } from '@components/dropdown';
 import { menus } from '@data/index';
@@ -18,7 +17,7 @@ const NavbarTwoColumns = (props: INavbarProps) => (
       <Link href="/">
         <a>{props.logo}</a>
       </Link>
-      <div className="pt-1 flex gap-5">
+      {/* <div className="pt-1 flex gap-5">
         <div className="text-white">
           <FaDiscord size={18} />
         </div>
@@ -28,7 +27,7 @@ const NavbarTwoColumns = (props: INavbarProps) => (
         <div className="text-white">
           <FaTwitter size={18} />
         </div>
-      </div>
+      </div> */}
     </div>
 
     <nav>
