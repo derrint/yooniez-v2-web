@@ -16,9 +16,10 @@ import Banner3d from './banner-3d';
 const Banner = () => {
   const texts = [
     {
-      first: 'Into The',
-      second: 'Yooniverse',
-      third: 'Escape the Labyrinth to get the whitelist spot!',
+      first: 'LIVE EVENT',
+      second: 'MAZE',
+      third:
+        '100 first ones who escape the maze will get a <b>Whitelist</b> spot!',
     },
   ];
 
@@ -48,20 +49,7 @@ const Banner = () => {
         <div className="relative w-1/2 h-full flex flex-col justify-center z-[1] py-8">
           <Fade top duration={750} delay={250} when={state.isReady}>
             <div className="flex items-center gap-2">
-              <img
-                src="/assets/images/logos/logo-yooniez-w.svg"
-                alt=""
-                className="h-[22px] aspect-auto"
-                style={{
-                  filter: 'drop-shadow(0px 0px 25px rgba(97, 250, 227, 0.6))',
-                }}
-              />
-              <h3
-                className="text-lg font-bold font-headline text-secondary tracking-tighter"
-                style={{
-                  transform: 'rotate(-7.06deg)',
-                }}
-              >
+              <h3 className="text-lg font-bold font-headline text-secondary tracking-tighter">
                 {text?.first}
               </h3>
             </div>
