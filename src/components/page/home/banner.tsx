@@ -74,7 +74,7 @@ const Banner = () => {
                     px-16 py-3
                     bg-primary
                     text-3xl font-headline text-white
-                    rounded-lg
+                    rounded-md
                   "
                 onClick={() => {}}
               >

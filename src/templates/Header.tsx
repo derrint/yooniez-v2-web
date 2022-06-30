@@ -166,10 +166,11 @@ const Header = () => {
             <button
               className="
                 flex gap-2
-                px-3 py-1
+                px-3 py-2
                 bg-secondary
-                text-base text-primary
+                text-sm text-primary
                 font-headline
+                rounded-sm
               "
               onClick={() => {
                 if (!account) {
