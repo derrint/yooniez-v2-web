@@ -4,7 +4,6 @@ import React from 'react';
 import { useEthers } from '@usedapp/core';
 // import Link from 'next/link';
 // import { FiArrowRight } from 'react-icons/fi';
-import { Fade } from 'react-reveal';
 
 import { Background } from '@components/background';
 // import { DropdownMenu } from '@components/dropdown';
@@ -90,137 +89,135 @@ const Header = () => {
         state.isAnimationDone ? '' : ''
       }`}
     >
-      <Fade top duration={750} delay={0} when={state.isReady}>
-        <Section
-          yPadding="py-5 pb-6"
-          className={`header-section relative lg:!px-8 transition-colors duration-500 ${
-            isScrolled ? 'bg-primary' : ''
-          }`}
-          isHeader
-        >
-          <NavbarTwoColumns
-            logo={
-              <img
-                src="/assets/images/logos/logo-yooniez-w.svg"
-                alt=""
-                className={`h-4 aspect-auto transition-opacity duration-300 ${
-                  isScrolled ? '' : ''
-                }`}
-              />
-            }
-            // leftComponent={
-            //   <div className="pt-1 flex items-center gap-5">
-            //     <div className={isScrolled ? 'text-primary' : 'text-white'}>
-            //       <FaDiscord size={18} />
-            //     </div>
-            //     <div className={isScrolled ? 'text-primary' : 'text-white'}>
-            //       <FaInstagram size={18} />
-            //     </div>
-            //     <div className={isScrolled ? 'text-primary' : 'text-white'}>
-            //       <FaTwitter size={18} />
-            //     </div>
-            //   </div>
-            // }
-          >
-            {/* {menus.map(
-              ({
-                id,
-                label,
-                href,
-                submenus,
-                isButton,
-                isDesktop,
-                isMobile,
-              }: any) => (
-                <li
-                  key={id}
-                  className={`${
-                    isDesktop && !isMobile ? 'hidden md:block' : ''
-                  } ${!isDesktop && isMobile ? 'md:hidden' : ''}`}
-                >
-                  <div className="text-right">
-                    {submenus ? (
-                      <DropdownMenu
-                        title={label}
-                        items={submenus}
-                        onChange={(v: any) => console.log(v)}
-                        showPreview
-                        classNames={{ itemsWrapper: '!mt-4 !rounded-xl' }}
-                      />
-                    ) : (
-                      <Link href={href} passHref>
-                        <a
-                          className={`text-base lg:text-lg font-bold ${
-                            isButton
-                              ? 'bg-tertiary text-black px-4 lg:px-6 py-2 lg:py-4'
-                              : 'text-white'
-                          }`}
-                        >
-                          {label}
-                        </a>
-                      </Link>
-                    )}
-                  </div>
-                </li>
-              )
-            )} */}
-            <li>
-              <button
-                className="
-                  flex gap-2
-                  px-3 py-1
-                  bg-secondary
-                  text-base text-primary
-                  font-headline
-                "
-                onClick={() => {
-                  if (!account) {
-                    showModal('connect-wallet');
-                  }
-                }}
-              >
-                {account ? (
-                  <>
-                    {account &&
-                      `${account.slice(0, 6)}...${account.slice(
-                        account.length - 1,
-                        account.length
-                      )}`}
-                    ETH
-                  </>
-                ) : (
-                  'CONNECT WALLET'
-                )}
-              </button>
-            </li>
-            {/* <li
-              className={`transition-opacity duration-500 ${
-                isScrolled ? '' : 'hidden'
+      <Section
+        yPadding="py-5 pb-6"
+        className={`header-section relative lg:!px-8 transition-colors duration-500 ${
+          isScrolled ? 'bg-primary' : ''
+        }`}
+        isHeader
+      >
+        <NavbarTwoColumns
+          logo={
+            <img
+              src="/assets/images/logos/logo-yooniez-w.svg"
+              alt=""
+              className={`h-4 aspect-auto transition-opacity duration-300 ${
+                isScrolled ? '' : ''
               }`}
-            >
-              <button
-                className="
-                  flex gap-2 items-center
-                  px-5 py-3
-                  rounded-full shadow-lg bg-tertiary
-                  border-x border-y border-tertiary-dark
-                  text-base font-bold text-tertiary-dark
-                "
-                onClick={() => {
-                  if (!account) {
-                    showModal('connect-wallet');
-                  } else {
-                    showModal('tweet');
-                  }
-                }}
+            />
+          }
+          // leftComponent={
+          //   <div className="pt-1 flex items-center gap-5">
+          //     <div className={isScrolled ? 'text-primary' : 'text-white'}>
+          //       <FaDiscord size={18} />
+          //     </div>
+          //     <div className={isScrolled ? 'text-primary' : 'text-white'}>
+          //       <FaInstagram size={18} />
+          //     </div>
+          //     <div className={isScrolled ? 'text-primary' : 'text-white'}>
+          //       <FaTwitter size={18} />
+          //     </div>
+          //   </div>
+          // }
+        >
+          {/* {menus.map(
+            ({
+              id,
+              label,
+              href,
+              submenus,
+              isButton,
+              isDesktop,
+              isMobile,
+            }: any) => (
+              <li
+                key={id}
+                className={`${
+                  isDesktop && !isMobile ? 'hidden md:block' : ''
+                } ${!isDesktop && isMobile ? 'md:hidden' : ''}`}
               >
-                Enter Labyrinth
-                <FiArrowRight size={18} />
-              </button>
-            </li> */}
-          </NavbarTwoColumns>
-        </Section>
-      </Fade>
+                <div className="text-right">
+                  {submenus ? (
+                    <DropdownMenu
+                      title={label}
+                      items={submenus}
+                      onChange={(v: any) => console.log(v)}
+                      showPreview
+                      classNames={{ itemsWrapper: '!mt-4 !rounded-xl' }}
+                    />
+                  ) : (
+                    <Link href={href} passHref>
+                      <a
+                        className={`text-base lg:text-lg font-bold ${
+                          isButton
+                            ? 'bg-tertiary text-black px-4 lg:px-6 py-2 lg:py-4'
+                            : 'text-white'
+                        }`}
+                      >
+                        {label}
+                      </a>
+                    </Link>
+                  )}
+                </div>
+              </li>
+            )
+          )} */}
+          <li>
+            <button
+              className="
+                flex gap-2
+                px-3 py-1
+                bg-secondary
+                text-base text-primary
+                font-headline
+              "
+              onClick={() => {
+                if (!account) {
+                  showModal('connect-wallet');
+                }
+              }}
+            >
+              {account ? (
+                <>
+                  {account &&
+                    `${account.slice(0, 6)}...${account.slice(
+                      account.length - 1,
+                      account.length
+                    )}`}
+                  ETH
+                </>
+              ) : (
+                'CONNECT WALLET'
+              )}
+            </button>
+          </li>
+          {/* <li
+            className={`transition-opacity duration-500 ${
+              isScrolled ? '' : 'hidden'
+            }`}
+          >
+            <button
+              className="
+                flex gap-2 items-center
+                px-5 py-3
+                rounded-full shadow-lg bg-tertiary
+                border-x border-y border-tertiary-dark
+                text-base font-bold text-tertiary-dark
+              "
+              onClick={() => {
+                if (!account) {
+                  showModal('connect-wallet');
+                } else {
+                  showModal('tweet');
+                }
+              }}
+            >
+              Enter Labyrinth
+              <FiArrowRight size={18} />
+            </button>
+          </li> */}
+        </NavbarTwoColumns>
+      </Section>
 
       <Modal name="connect-wallet">
         <div className="text-left bg-primary-dark text-white shadow-xl p-14 rounded-2xl">
