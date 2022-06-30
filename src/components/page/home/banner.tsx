@@ -4,7 +4,6 @@ import React from 'react';
 // import Tippy from '@tippyjs/react';
 // import Image from 'next/image';
 import 'tippy.js/animations/scale.css';
-import { MdOutlineAccessTimeFilled } from 'react-icons/md';
 import { Fade } from 'react-reveal';
 // import { followCursor } from 'tippy.js';
 
@@ -21,7 +20,7 @@ const Banner = () => {
       third:
         '100 first ones who escape the maze will get a <b>Whitelist</b> spot!',
     },
-  ];
+  ] as any;
 
   const [text, setText] = React.useState(texts[0]);
 
@@ -45,65 +44,47 @@ const Banner = () => {
       "
       className="relative pt-32 pb-16"
     >
-      <Section className="relative flex items-center">
-        <div className="relative w-1/2 h-full flex flex-col justify-center z-[1] py-8">
+      <Section className="relative flex items-center lg:!px-8 ">
+        <div className="absolute top-0 flex flex-col justify-center z-[1] bg-secondary border-x border-y border-secondary rounded-xl overflow-hidden">
           <Fade top duration={750} delay={250} when={state.isReady}>
             <div className="flex items-center gap-2">
-              <h3 className="text-lg font-bold font-headline text-secondary tracking-tighter">
+              <h3 className="text-base font-headline bg-primary text-secondary pl-3 pr-6 py-2 rounded-br-full">
                 {text?.first}
               </h3>
             </div>
           </Fade>
-          <Fade top duration={750} delay={500} when={state.isReady}>
-            <h1
-              className="text-[40px] font-headline text-[#F0F5FF]"
-              style={{
-                textShadow: '0px 0px 25px rgba(97, 250, 227, 0.6)',
-              }}
-            >
-              {text?.second}
-            </h1>
-          </Fade>
+          <div className="p-4">
+            <Fade top duration={750} delay={500} when={state.isReady}>
+              <h1 className="text-5xl font-headline text-primary">
+                {text?.second}
+              </h1>
+            </Fade>
 
-          <Fade top duration={750} delay={750} when={state.isReady}>
-            <h2 className="text-[40px] mt-2 mb-5 pt-4 font-headline text-white max-w-[488px] relative text-shadow-lg">
-              <div className="border-t-2 border-white opacity-30 absolute top-0 left-0 w-full" />
-              <div className="border-t-2 border-secondary opacity-80 absolute top-0 left-0 w-[226px]" />
-              {text?.third}
-            </h2>
-            <div>
-              <div className="inline-block mb-6 px-4 py-2 text-secondary bg-black/40 border-x border-y border-secondary rounded-full shadow-md">
-                <span className="font-bold">83/200 </span>
-                Spots Available
-              </div>
-            </div>
-          </Fade>
-          <Fade top duration={750} delay={1000} when={state.isReady}>
-            <div className="flex items-center mt-5 bg-black/30 shadow-md pl-6 p-4 rounded-2xl w-fit gap-5">
-              <div className="text-white text-sm flex items-start gap-2">
-                <MdOutlineAccessTimeFilled size={20} className="mt-1" />
-                <div>
-                  Time left to get whitelisted <br />
-                  <span className="text-tertiary font-bold">
-                    40 Days 17 Hours 8 Mins
-                  </span>
-                </div>
-              </div>
-              <div>
-                <button
-                  className="
-                    px-5 py-3
-                    rounded-full shadow-lg bg-tertiary
-                    border-x border-y border-tertiary-dark
-                    text-base font-bold text-tertiary-dark
+            <Fade top duration={750} delay={750} when={state.isReady}>
+              <p
+                className="text-base mt-2 mb-4 text-black max-w-xs relative"
+                dangerouslySetInnerHTML={{ __html: text?.third }}
+              >
+                {}
+              </p>
+            </Fade>
+            <Fade top duration={750} delay={1000} when={state.isReady}>
+              <button
+                className="
+                    px-16 py-3
+                    bg-primary
+                    text-3xl font-headline text-white
+                    rounded-lg
                   "
-                  onClick={() => {}}
-                >
-                  Enter Labyrinth to Get Spot
-                </button>
-              </div>
-            </div>
-          </Fade>
+                onClick={() => {}}
+              >
+                ENTER
+                <div className="font-sans text-sm font-normal text-secondary">
+                  Ends in 10:23:45
+                </div>
+              </button>
+            </Fade>
+          </div>
         </div>
         <div className="w-1/2 z-[1]">
           {/* <img
