@@ -21,3 +21,7 @@ export const hideModal = async (context: any) => {
     isVisible: false,
   };
 };
+
+export const setYScrollPosition = async (context: any, payload: number) => {
+  context.state.yScrollPosition = payload;
+};

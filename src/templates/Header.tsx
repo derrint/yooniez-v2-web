@@ -15,12 +15,13 @@ import { NavbarTwoColumns } from '@components/navigation/index';
 import { useActions, useState } from '@overmind/index';
 
 const Header = () => {
-  const { modal } = useState();
-  const { showModal, hideModal } = useActions();
+  const { modal, yScrollPosition } = useState();
+  const { showModal, hideModal, setYScrollPosition } = useActions();
 
   const [state, setState] = React.useState({
     isReady: false,
     isAnimationDone: false,
+    isScrolling: false,
   });
 
   React.useEffect(() => {
@@ -49,24 +50,38 @@ const Header = () => {
   }, [account]);
 
   const [isScrolled, setIsScrolled] = React.useState(false);
-  const onScroll = () => {
-    if (window.scrollY >= 80) {
-      setIsScrolled(true);
-    } else {
-      setIsScrolled(false);
-    }
-  };
 
   React.useEffect(() => {
-    // onScroll();
-    window.addEventListener('scroll', onScroll);
-
     setTimeout(() => {
       setState({ ...state, isReady: true });
     }, 250);
 
     return () => {};
   }, []);
+
+  React.useEffect(() => {
+    const onScroll = () => {
+      // ----- update y scroll position -----
+      setYScrollPosition(window.pageYOffset);
+      if (window.scrollY >= 80) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+
+      // ----- set scrolling state -----
+      setState({ ...state, isScrolling: true });
+      if (state.isScrolling) {
+        setTimeout(() => {
+          setState({ ...state, isScrolling: false });
+        }, 1000);
+      }
+    };
+
+    window.addEventListener('scroll', onScroll);
+
+    return () => window.removeEventListener('scroll', onScroll);
+  }, [yScrollPosition]);
 
   return (
     <Background

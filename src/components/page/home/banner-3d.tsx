@@ -3,7 +3,11 @@ import { Suspense } from 'react';
 import { OrbitControls, useGLTF } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
 
+import { useState } from '@overmind/index';
+
 const Banner3d = () => {
+  const { yScrollPosition } = useState();
+
   const Model = ({ scale = 3.5, position = [0, -3.25, 0] }) => {
     const gltf = useGLTF('./assets/3d/silent_ash/scene.gltf');
 
@@ -13,6 +17,8 @@ const Banner3d = () => {
       </>
     );
   };
+
+  const objectAngle = yScrollPosition / 200;
 
   return (
     <Canvas style={{ height: 550 }}>
@@ -29,12 +35,14 @@ const Banner3d = () => {
       <Suspense fallback={null}>
         <Model />
         <OrbitControls
-          autoRotate
-          autoRotateSpeed={6}
+          // autoRotate
+          // autoRotateSpeed={6}
           enablePan={false}
           enableZoom={false}
           minPolarAngle={1.571}
           maxPolarAngle={1.571}
+          minAzimuthAngle={objectAngle}
+          maxAzimuthAngle={objectAngle}
         />
       </Suspense>
     </Canvas>
