@@ -21,12 +21,9 @@ const About = () => {
 
   return (
     <Background
-      color="bg-primary"
+      color="bg-tertiary"
       className="
         relative z-[2]
-        after:content-[''] after:absolute after:-top-40 after:left-0
-        after:w-full after:h-40
-        after:bg-gradient-to-b after:from-transparent after:to-primary 
       "
     >
       <Section yPadding="py-8 sm:py-16 lg:pb-32" id="about">

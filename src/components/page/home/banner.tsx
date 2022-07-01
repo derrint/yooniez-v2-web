@@ -9,12 +9,8 @@ import { Fade } from 'react-reveal';
 
 import { Background } from '@components/background';
 import { Section } from '@components/layout';
-import { useState } from '@overmind/index';
-
-import Banner3d from './banner-3d';
 
 const Banner = () => {
-  const { yScrollPosition } = useState();
   const texts = [
     {
       first: 'LIVE EVENT',
@@ -44,7 +40,7 @@ const Banner = () => {
       color="bg-primary
       after:content-[''] after:absolute after:top-0 after:left-0 after:bg-[url('/assets/images/bgs/bg-labyrinth.png')] after:mix-blend-multiply after:w-full after:h-full after:bg-cover
       "
-      className="relative pt-32 pb-16 min-h-screen"
+      className="relative pt-32 pb-16 h-[650px]"
     >
       <Section className="relative flex items-center lg:!px-8 ">
         <div className="absolute top-0 flex flex-col justify-center z-[1] bg-secondary border-x border-y border-secondary rounded-xl overflow-hidden">
@@ -89,13 +85,6 @@ const Banner = () => {
           </div>
         </div>
       </Section>
-      <div
-        className={`z-[3] top-0 w-full h-full flex items-center justify-center ${
-          yScrollPosition <= 650 ? 'fixed' : 'fixed'
-        }`}
-      >
-        <Banner3d />
-      </div>
     </Background>
   );
 };
