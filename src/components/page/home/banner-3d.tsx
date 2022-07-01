@@ -8,8 +8,8 @@ import { useState } from '@overmind/index';
 const Banner3d = () => {
   const { yScrollPosition } = useState();
 
-  const Model = ({ scale = 3.5, position = [0, -3.25, 0] }) => {
-    const gltf = useGLTF('./assets/3d/silent_ash/scene.gltf');
+  const Model = ({ scale = 3.5, position = [0, -3, 0] }) => {
+    const gltf = useGLTF('./assets/3d/level_char/scene.gltf');
 
     return (
       <>
@@ -18,9 +18,20 @@ const Banner3d = () => {
     );
   };
 
+  // React.useEffect(() => {
+  //   if (yScrollPosition > 650) {
+  //     console.log(-3 + yScrollPosition / 500);
+  //   }
+  // }, [yScrollPosition]);
+
   const modelData = {
     angle: yScrollPosition <= 650 ? 3 - yScrollPosition / 200 : -0.25,
     scale: yScrollPosition <= 650 ? 4 - yScrollPosition / 500 : 2.7,
+    position: [
+      0,
+      yScrollPosition <= 650 ? -3 + yScrollPosition / 500 : -1.698,
+      0,
+    ],
   };
 
   return (
@@ -36,7 +47,7 @@ const Banner3d = () => {
       <pointLight position={[-10, -10, -10]} />
 
       <Suspense fallback={null}>
-        <Model scale={modelData.scale} />
+        <Model scale={modelData.scale / 120} position={modelData.position} />
         <OrbitControls
           // autoRotate
           // autoRotateSpeed={6}

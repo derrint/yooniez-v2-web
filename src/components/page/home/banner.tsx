@@ -42,7 +42,7 @@ const Banner = () => {
       "
       className="relative pt-32 pb-16 h-[650px]"
     >
-      <Section className="relative flex items-center lg:!px-8 ">
+      <Section className="relative flex items-center lg:!px-4 ">
         <div className="absolute top-0 flex flex-col justify-center z-[1] bg-secondary border-x border-y border-secondary rounded-xl overflow-hidden">
           <Fade top duration={750} delay={250} when={state.isReady}>
             <div className="flex items-center gap-2">

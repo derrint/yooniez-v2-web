@@ -1,0 +1,11 @@
+Model Information:
+* title:	Level Char
+* source:	https://sketchfab.com/3d-models/level-char-1df1efa2b4c045638fa4bab47d462768
+* author:	spavel (https://sketchfab.com/spavel)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Level Char" (https://sketchfab.com/3d-models/level-char-1df1efa2b4c045638fa4bab47d462768) by spavel (https://sketchfab.com/spavel) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

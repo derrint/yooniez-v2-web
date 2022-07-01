@@ -44,8 +44,8 @@ const About = () => {
         <div className="relative flex flex-col justify-center z-[1]">
           <div>
             <Fade left duration={750} delay={0} when={state.isReady}>
-              <div className="text-center pb-96">
-                <h1 className="text-xl sm:text-3xl lg:text-9xl lg:leading-[100px] mb-3 lg:mb-5 text-primary font-headline">
+              <div className="text-center">
+                <h1 className="text-xl sm:text-3xl lg:text-8xl lg:leading-[90px] mb-3 lg:mb-5 text-primary font-headline">
                   7,777
                 </h1>
                 <h3 className="text-md sm:text-lg lg:text-xl mb-3 lg:mb-5 text-black font-headline">
@@ -53,6 +53,60 @@ const About = () => {
                 </h3>
               </div>
             </Fade>
+          </div>
+
+          <div className="pt-5">
+            <div className="flex justify-center">
+              <Fade
+                right
+                duration={500}
+                delay={250}
+                when={state.isReady && yScrollPosition > 650}
+              >
+                <img
+                  src="/assets/images/chars/char-owl.png"
+                  alt=""
+                  className="absolute mt-4 mr-[340px] h-[200px] -z-[2]"
+                />
+              </Fade>
+              <Fade
+                right
+                duration={500}
+                delay={0}
+                when={state.isReady && yScrollPosition > 650}
+              >
+                <img
+                  src="/assets/images/chars/char-frog.png"
+                  alt=""
+                  className="absolute -mt-5 mr-48 h-[240px] -z-[1]"
+                />
+              </Fade>
+
+              <Fade
+                left
+                duration={500}
+                delay={0}
+                when={state.isReady && yScrollPosition > 650}
+              >
+                <img
+                  src="/assets/images/chars/char-fish.png"
+                  alt=""
+                  className="absolute -mt-5 ml-48 h-[240px] -z-[1]"
+                />
+              </Fade>
+              <Fade
+                left
+                duration={500}
+                delay={250}
+                when={state.isReady && yScrollPosition > 650}
+              >
+                <img
+                  src="/assets/images/chars/char-bear.png"
+                  alt=""
+                  className="absolute mt-4 ml-80 h-[200px] -z-[2]"
+                />
+              </Fade>
+            </div>
           </div>
 
           <Zoom duration={750} delay={250} when={state.isReady}>

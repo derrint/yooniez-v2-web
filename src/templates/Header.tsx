@@ -90,8 +90,8 @@ const Header = () => {
       }`}
     >
       <Section
-        yPadding="py-5 pb-6"
-        className={`header-section relative lg:!px-8 transition-colors duration-500 ${
+        yPadding="py-2"
+        className={`header-section relative lg:!px-2 transition-colors duration-500 ${
           isScrolled ? 'bg-primary' : ''
         }`}
         isHeader
@@ -101,7 +101,7 @@ const Header = () => {
             <img
               src="/assets/images/logos/logo-yooniez-w.svg"
               alt=""
-              className={`h-4 aspect-auto transition-opacity duration-300 ${
+              className={`h-4 pl-2 aspect-auto transition-opacity duration-300 ${
                 isScrolled ? '' : ''
               }`}
             />
@@ -168,7 +168,7 @@ const Header = () => {
                 flex gap-2
                 px-3 py-2
                 bg-secondary
-                text-sm text-primary
+                text-xs text-primary
                 font-headline
                 rounded-sm
               "
