@@ -1,6 +1,5 @@
 import Link from 'next/link';
-import { FaDiscord, FaTwitter, FaYoutube } from 'react-icons/fa';
-import { FiMail } from 'react-icons/fi';
+import { FaDiscord, FaTwitter } from 'react-icons/fa';
 
 import { Background } from '@components/background/Background';
 import { Section } from '@components/layout/Section';
@@ -9,66 +8,81 @@ const Footer = () => {
   const menus = [
     {
       id: 1,
-      label: 'Terms and Conditions',
+      label: 'Drop Details and Tips',
       href: '/',
     },
     {
       id: 2,
-      label: 'Privacy Policy',
+      label: 'Traits & Rarities',
+      href: '/',
+    },
+    {
+      id: 3,
+      label: 'Terms of Service',
+      href: '/',
+    },
+    {
+      id: 4,
+      label: 'White Paper',
+      href: '/',
+    },
+    {
+      id: 5,
+      label: 'Complete Lore',
       href: '/',
     },
   ];
 
   return (
-    <Background color="bg-primary">
-      <Section className="lg:!px-8 flex justify-between" isFooter>
-        <div className="flex flex-wrap justify-between items-center">
-          <nav className="">
-            <ul className="navbar flex flex-col sm:flex-row gap-4 sm:gap-8 lg:gap-10 justify-start lg:justify-end items-start sm:items-center">
-              <li>
-                <span className="text-sm font-semibold text-white">
-                  Copyright &copy; Yooniez 2022
-                </span>
-              </li>
-              {menus.map((item: any) => {
-                return (
-                  <li
-                    key={item.id}
-                    className="flex justify-center items-center gap-3 whitespace-nowrap"
-                  >
-                    <Link href="/">
-                      <a className="text-sm text-white">{item.label}</a>
-                    </Link>
-                  </li>
-                );
-              })}
-            </ul>
-          </nav>
+    <Background
+      color="bg-secondary"
+      className="relative before:content-[''] before:absolute before:-top-20 before:left-0 before:bg-[url('/assets/images/bgs/bg-footer.png')] before:w-full before:h-full before:bg-cover z-[2]"
+    >
+      {/* <img
+        src="/assets/images/bgs/bg-footer.png"
+        alt=""
+        className="absolute hidden sm:block right-0 -top-20 sm:w-full z-[2]"
+      /> */}
+      <Section className="lg:!px-8 grid grid-cols-3 justify-between" isFooter>
+        <div />
+        <div className="z-[4] text-center flex flex-col gap-10">
+          <div>
+            <img
+              src="/assets/images/logos/logo-yooniez-purple.svg"
+              alt=""
+              className="inline h-12 mx-2 mb-1"
+            />
+          </div>
+
+          <div className="flex items-center justify-center gap-2">
+            <div className="rounded-md rounded-br-xl p-1 bg-primary text-white">
+              <FaTwitter size={16} />
+            </div>
+            <div className="rounded-md rounded-br-xl p-1 bg-primary text-white">
+              <FaDiscord size={16} />
+            </div>
+          </div>
+
+          <span className="text-sm text-black">&copy; 2022 Yooniez</span>
         </div>
-        <div className="flex flex-wrap justify-between items-center">
-          <nav className="">
-            <ul className="navbar flex flex-col sm:flex-row gap-4 sm:gap-8 lg:gap-10 justify-start lg:justify-end items-start sm:items-center">
-              <li className="flex justify-center items-center gap-3 whitespace-nowrap">
-                <Link href="/">
-                  <a className="text-sm text-white">
-                    <FiMail size={16} className="inline mr-2" />
-                    support@yooniez-nft.com
-                  </a>
-                </Link>
-              </li>
-              <li className="flex justify-center items-center gap-3">
-                <div className="rounded-full p-1 bg-white text-primary">
-                  <FaDiscord size={16} />
-                </div>
-                <div className="rounded-full p-1 bg-white text-primary">
-                  <FaYoutube size={16} />
-                </div>
-                <div className="rounded-full p-1 bg-white text-primary">
-                  <FaTwitter size={16} />
-                </div>
-              </li>
-            </ul>
-          </nav>
+        <div className="z-[4] text-right">
+          <h2 className="font-headline text-primary text-lg mb-2">
+            PUBLIC DOC
+          </h2>
+          <ul className=" flex flex-col gap-2 justify-start lg:justify-end items-end">
+            {menus.map((item: any) => {
+              return (
+                <li
+                  key={item.id}
+                  className="flex justify-center items-center gap-3 whitespace-nowrap"
+                >
+                  <Link href="/">
+                    <a className="text-sm text-black">{item.label}</a>
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
         </div>
       </Section>
     </Background>

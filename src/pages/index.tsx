@@ -1,4 +1,11 @@
-import { Banner, About, Chars, Roadmap, Video } from '@components/page/home';
+import {
+  Banner,
+  About,
+  Chars,
+  Roadmap,
+  Team,
+  Video,
+} from '@components/page/home';
 
 const Home = () => {
   return (
@@ -8,6 +15,7 @@ const Home = () => {
       <About />
       <Video />
       <Roadmap />
+      <Team />
     </>
   );
 };
