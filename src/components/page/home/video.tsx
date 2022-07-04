@@ -12,7 +12,10 @@ const Spotlight = () => {
   const [videoUrl, setVideoUrl] = React.useState(videoUrls[0]);
 
   return (
-    <Background color="bg-[url('/assets/images/bgs/bg-video-2.png')] bg-cover">
+    <Background
+      color="bg-[url('/assets/images/bgs/bg-video-2.png')] bg-cover"
+      className="relative"
+    >
       <button
         onClick={() => {
           setVideoUrl(videoUrls[0]);
@@ -20,6 +23,13 @@ const Spotlight = () => {
         }}
         className="relative cursor-pointer w-screen aspect-video outline-none"
       ></button>
+
+      <img
+        src="/assets/images/vectors/vertical-line-w.svg"
+        alt=""
+        className="absolute hidden sm:block left-10 bottom-0 sm:w-5 z-[2]"
+      />
+
       <Modal name="video-player" closeButton={{ color: 'black' }}>
         <div className="text-left bg-white shadow-xl ">
           <>

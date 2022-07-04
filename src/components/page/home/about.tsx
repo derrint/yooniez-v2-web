@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React from 'react';
 
-import { Fade, Zoom } from 'react-reveal';
+import { Fade } from 'react-reveal';
 
 import { Background } from '@components/background';
 import { Section } from '@components/layout';
@@ -69,18 +69,17 @@ const About = () => {
                   , a legion of misfits.
                 </p>
 
-                <a href="#">Read complete Lore here</a>
+                <div className="mt-10">
+                  <a
+                    href="#"
+                    className="text-secondary underline underline-offset-8"
+                  >
+                    Read complete Lore here
+                  </a>
+                </div>
               </div>
             </Fade>
           </div>
-
-          <Zoom duration={750} delay={250} when={state.isReady}>
-            <img
-              src="/assets/images/vectors/arrow-swirly.svg"
-              alt=""
-              className="absolute hidden sm:block right-0 lg:right-40 -bottom-20 w-[40px] sm:w-[80px] -z-[1]"
-            />
-          </Zoom>
         </div>
       </Section>
     </Background>
