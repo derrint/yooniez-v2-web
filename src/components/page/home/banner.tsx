@@ -44,10 +44,10 @@ const Banner = () => {
       className="relative pt-32 pb-16 h-screen"
     >
       <Section className="relative flex items-center lg:!px-4 ">
-        <div className="absolute top-0 flex flex-col justify-center z-[3] bg-secondary border-x border-y border-secondary rounded-xl overflow-hidden">
+        <div className="absolute top-0 flex flex-col justify-center z-[3] bg-[url('/assets/images/bgs/bg-banner-text.svg')] bg-contain bg-no-repeat overflow-hidden">
           <Fade top duration={750} delay={250} when={state.isReady}>
-            <div className="flex items-center gap-2">
-              <h3 className="text-base font-headline bg-primary text-secondary pl-3 pr-6 py-2 rounded-br-full">
+            <div className="flex items-center gap-2 pl-[1px] pt-[1px]">
+              <h3 className="text-sm font-headline  bg-[url('/assets/images/bgs/bg-banner-text-title.svg')] bg-contain bg-no-repeat text-secondary pl-2 pr-10 py-1 rounded-tl-xl">
                 {text?.first}
               </h3>
             </div>
@@ -70,10 +70,10 @@ const Banner = () => {
             <Fade top duration={750} delay={1000} when={state.isReady}>
               <button
                 className="
-                    px-12 py-3
-                    bg-primary
-                    text-3xl font-headline text-white
-                    rounded-md
+                    px-16 py-2
+                    bg-[url('/assets/images/bgs/bg-banner-text-button.svg')] bg-contain bg-no-repeat
+                    text-2xl font-headline text-white
+                    mr-32
                   "
                 onClick={() => {}}
               >

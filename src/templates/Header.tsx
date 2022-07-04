@@ -91,8 +91,8 @@ const Header = () => {
     >
       <Section
         yPadding="py-2"
-        className={`header-section relative lg:!px-2 transition-colors duration-500 ${
-          isScrolled ? 'bg-primary' : ''
+        className={`header-section relative lg:!px-2 transition-colors duration-500 bg-[url('/assets/images/bgs/bg-header.svg')] bg-cover ${
+          isScrolled ? '' : ''
         }`}
         isHeader
       >
@@ -166,11 +166,11 @@ const Header = () => {
             <button
               className="
                 flex gap-2
-                px-3 py-2
-                bg-secondary
+                pl-3 pr-5 py-2
                 text-xs text-primary
                 font-headline
-                rounded-sm
+                bg-[url('/assets/images/bgs/bg-header-button.svg')] bg-contain bg-no-repeat
+                mr-4
               "
               onClick={() => {
                 if (!account) {
