@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React from 'react';
 
-import { Fade, Zoom } from 'react-reveal';
+import { Fade } from 'react-reveal';
 
 import { Background } from '@components/background';
 import { Section } from '@components/layout';
@@ -29,7 +29,9 @@ const About = () => {
       color="bg-secondary"
       className="
         relative z-[2]
-        h-[650px]
+        h-screen
+        before:bg-[url('/assets/images/bgs/bg-yellow.svg')] before:bg-cover before:absolute before:-top-[7%] sm:before:-top-[15%] md:before:-top-[38%] before:left-0 before:w-full before:h-full 
+        after:content-[''] after:absolute after:top-20 after:right-0 after:bg-[url('/assets/images/bgs/bg-dots-yellow.png')] after:w-1/2 after:h-full after:bg-contain after:bg-no-repeat after:mix-blend-multiply 
       "
     >
       <div
@@ -39,6 +41,18 @@ const About = () => {
       >
         <Banner3d />
       </div>
+
+      <img
+        src="/assets/images/bgs/bg-dots-purple-1.png"
+        alt=""
+        className="absolute hidden sm:block left-0 bottom-0 sm:w-full z-[1]"
+      />
+
+      <img
+        src="/assets/images/vectors/diagonal-lines.svg"
+        alt=""
+        className="absolute hidden sm:block left-0 -top-1/2 sm:w-1/2 z-[1]"
+      />
 
       <Section yPadding="py-8 sm:py-16 lg:pb-32" id="about">
         <div className="relative flex flex-col justify-center z-[1]">
@@ -108,14 +122,6 @@ const About = () => {
               </Fade>
             </div>
           </div>
-
-          <Zoom duration={750} delay={250} when={state.isReady}>
-            <img
-              src="/assets/images/vectors/arrow-swirly.svg"
-              alt=""
-              className="absolute hidden sm:block right-0 lg:right-40 -bottom-20 w-[40px] sm:w-[80px] -z-[1]"
-            />
-          </Zoom>
         </div>
       </Section>
     </Background>

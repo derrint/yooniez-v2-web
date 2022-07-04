@@ -25,10 +25,10 @@ const About = () => {
       className="
         relative z-[2]
         after:bg-[url('/assets/images/bgs/bg-grunge-red.png')] after:bg-cover after:absolute after:top-0 after:left-0 after:w-full after:h-full 
-        before:bg-[url('/assets/images/bgs/bg-red-spike.svg')] before:bg-contain before:absolute before:-top-[7%] sm:before:-top-[15%] md:before:-top-[20%] before:left-0 before:w-full before:h-full 
+        before:bg-[url('/assets/images/bgs/bg-red-spike.svg')] before:bg-contain before:absolute before:-top-[4%] sm:before:-top-[10%] md:before:-top-[13%]  before:left-0 before:w-full before:h-full 
       "
     >
-      <Section yPadding="py-8 sm:py-16 lg:pb-32" id="about">
+      <Section yPadding="py-8 sm:py-16 lg:py-32" id="about">
         <div className="relative flex flex-col justify-center z-[1] bg-[url('/assets/images/bgs/bg-grunge-red-2.png')]">
           <div className="mx-auto">
             <Fade left duration={750} delay={0} when={state.isReady}>
@@ -49,9 +49,9 @@ const About = () => {
             </Fade>
           </div>
 
-          <div>
+          <div className="mt-56 mb-32">
             <Fade left duration={750} delay={0} when={state.isReady}>
-              <div className="text-left mt-32">
+              <div className="text-left">
                 <p className="lg:text-3xl font-light text-white max-w-xl ">
                   Change will not come if we wait for some other person or some
                   other time.

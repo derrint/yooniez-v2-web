@@ -37,13 +37,14 @@ const Banner = () => {
 
   return (
     <Background
-      color="bg-primary
-      after:content-[''] after:absolute after:top-0 after:left-0 after:bg-[url('/assets/images/bgs/bg-labyrinth.png')] after:mix-blend-multiply after:w-full after:h-full after:bg-cover
+      color="bg-gradient-radial from-primary to-primary-dark
+      before:content-[''] before:absolute before:top-0 before:left-0 before:bg-[url('/assets/images/bgs/bg-grunge-purple.png')] before:mix-blend-multiply before:w-full before:h-full before:bg-cover
+      after:content-[''] after:absolute after:top-20 after:right-0 after:bg-[url('/assets/images/vectors/arrows-right.svg')] after:w-[65%] after:h-full after:bg-contain after:bg-no-repeat
       "
-      className="relative pt-32 pb-16 h-[650px]"
+      className="relative pt-32 pb-16 h-screen"
     >
       <Section className="relative flex items-center lg:!px-4 ">
-        <div className="absolute top-0 flex flex-col justify-center z-[1] bg-secondary border-x border-y border-secondary rounded-xl overflow-hidden">
+        <div className="absolute top-0 flex flex-col justify-center z-[3] bg-secondary border-x border-y border-secondary rounded-xl overflow-hidden">
           <Fade top duration={750} delay={250} when={state.isReady}>
             <div className="flex items-center gap-2">
               <h3 className="text-base font-headline bg-primary text-secondary pl-3 pr-6 py-2 rounded-br-full">

@@ -21,7 +21,7 @@ const Spotlight = () => {
           setVideoUrl(videoUrls[0]);
           showModal('video-player');
         }}
-        className="relative cursor-pointer w-screen aspect-video outline-none"
+        className="relative cursor-pointer w-full aspect-video outline-none"
       ></button>
 
       <img

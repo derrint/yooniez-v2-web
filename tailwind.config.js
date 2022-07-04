@@ -21,7 +21,7 @@ module.exports = {
       colors: {
         primary: '#9100F4',
         'primary-light': '#A100FF',
-        'primary-dark': '#20003D',
+        'primary-dark': '#22025B',
         secondary: '#F9EB21',
         'secondary-dark': '#002520',
         tertiary: '#D91521',
@@ -30,8 +30,8 @@ module.exports = {
         // gray: '#888888',
         gradient: {
           primary: {
-            start: '#A100FF',
-            end: '#6E07AA',
+            start: '#9100F4',
+            end: '#22025B',
           },
         },
       },
@@ -41,6 +41,9 @@ module.exports = {
       boxShadow: {
         md: '0px 2px 10px #441463',
         lg: '0px 4px 0px #111111',
+      },
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
       },
     },
   },
