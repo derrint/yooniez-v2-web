@@ -24,48 +24,52 @@ const About = () => {
       color="bg-tertiary"
       className="
         relative z-[2]
+        after:bg-[url('/assets/images/bgs/bg-grunge-red.png')] after:bg-cover after:absolute after:top-0 after:left-0 after:w-full after:h-full 
+        before:bg-[url('/assets/images/bgs/bg-red-spike.svg')] before:bg-contain before:absolute before:-top-[7%] sm:before:-top-[15%] md:before:-top-[20%] before:left-0 before:w-full before:h-full 
       "
     >
       <Section yPadding="py-8 sm:py-16 lg:pb-32" id="about">
-        <div className="relative flex flex-col justify-center z-[1]">
-          <div>
+        <div className="relative flex flex-col justify-center z-[1] bg-[url('/assets/images/bgs/bg-grunge-red-2.png')]">
+          <div className="mx-auto">
             <Fade left duration={750} delay={0} when={state.isReady}>
               <div className="text-center">
-                <h3 className="text-xl sm:text-2xl lg:text-5xl font-bold mb-3 lg:mb-5 text-secondary font-headline tracking-tighter">
-                  About
-                </h3>
-
-                <h1 className="text-xl sm:text-2xl lg:text-[70px] lg:leading-[100px] mb-3 lg:mb-5 text-white font-headline">
-                  7777
+                <p className="lg:text-xl font-light text-white max-w-md">
                   <img
-                    src="/assets/images/illustrations/yooniez-red.png"
+                    src="/assets/images/logos/logo-yooniez-w.svg"
                     alt=""
-                    className="inline-block w-20 mx-5 -mt-3"
+                    className="inline h-5 mr-2 mb-1"
                   />
-                  Character
+                  are the enlightened, a society who seeks freedom of senses and
+                  intellect.
                   <br />
-                  unique NFT Living
-                  <img
-                    src="/assets/images/vectors/burst-star.svg"
-                    alt=""
-                    className="inline-block w-20 mx-5 -mt-3"
-                  />
-                  on the
-                  <br />
-                  Ethereum
-                  <img
-                    src="/assets/images/illustrations/yooniez-yellow.png"
-                    alt=""
-                    className="inline-block w-20 mx-5 -mt-3"
-                  />
-                  Blockchain
-                </h1>
-
-                <p className="lg:text-xl lg:leading-10 font-light text-white">
-                  Lorem Ipsum has been the industry&apos;s standard dummy text
-                  ever since the 1500s, when an unknown printer took a galley of
-                  type and scrambled it to make a type specimen book.
+                  We pursue an authentic experience, and eventually a bliss to
+                  create, shape, and live a worthy future.
                 </p>
+              </div>
+            </Fade>
+          </div>
+
+          <div>
+            <Fade left duration={750} delay={0} when={state.isReady}>
+              <div className="text-left mt-32">
+                <p className="lg:text-3xl font-light text-white max-w-xl ">
+                  Change will not come if we wait for some other person or some
+                  other time.
+                  <br />
+                  We are the ones we’ve been waiting for.
+                  <br />
+                  We are the change that we seek.
+                  <br />
+                  We are
+                  <img
+                    src="/assets/images/logos/logo-yooniez-w.svg"
+                    alt=""
+                    className="inline h-6 mx-2 mb-1"
+                  />
+                  , a legion of misfits.
+                </p>
+
+                <a href="#">Read complete Lore here</a>
               </div>
             </Fade>
           </div>

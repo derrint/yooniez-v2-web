@@ -6,8 +6,8 @@ const Home = () => {
       <Banner />
       <CharsV2 />
       <About />
-      <Traits />
       <Video />
+      <Traits />
     </>
   );
 };
