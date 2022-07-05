@@ -25,7 +25,10 @@ const Traits = () => {
       <Background
         color="bg-primary
         before:content-[''] before:absolute before:top-0 before:left-0 before:bg-[url('/assets/images/bgs/bg-grunge-purple.png')] before:mix-blend-multiply before:w-full before:h-full before:bg-cover
-        after:content-[''] after:absolute after:top-0 after:right-0 after:bg-[url('/assets/images/bgs/bg-coming-soon.png')] after:w-full after:h-full after:bg-contain after:bg-no-repeat 
+        after:content-[''] after:absolute 
+        after:top-0
+        after:right-0 after:bg-[url('/assets/images/bgs/bg-coming-soon.png')] after:w-full after:h-full after:bg-contain after:bg-no-repeat 
+        overflow-hidden
         "
         className="relative z-[2] pb-48"
       >
@@ -35,15 +38,15 @@ const Traits = () => {
           className="absolute hidden sm:block right-0 top-44 sm:w-1/2 z-[1] opacity-70 mix-blend-multiply"
         />
 
-        <Section yPadding="py-[8%]">
+        <Section yPadding="py-[8vw]">
           <div className="relative flex flex-col justify-center z-[1]">
             <div>
               <Fade left duration={750} delay={0} when={state.isReady}>
                 <div className="text-center">
-                  <h2 className="text-xl sm:text-2xl lg:text-4xl mb-2 lg:mb-3 text-secondary font-headline">
+                  <h2 className="text-2xl sm:text-3xl lg:text-4xl mb-2 lg:mb-3 text-secondary font-headline">
                     COMING TO YOU
                   </h2>
-                  <h1 className="text-2xl sm:text-4xl lg:text-8xl mb-2 lg:mb-3 text-secondary font-headline">
+                  <h1 className="text-6xl sm:text-7xl lg:text-8xl mb-2 lg:mb-3 text-secondary font-headline">
                     MID 2022
                   </h1>
                 </div>
