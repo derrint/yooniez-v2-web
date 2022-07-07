@@ -17,9 +17,9 @@ const About = () => {
   });
 
   React.useEffect(() => {
-    setTimeout(() => {
+    if (typeof window !== 'undefined') {
       setState({ ...state, isReady: true });
-    }, 250);
+    }
 
     return () => {};
   }, []);
@@ -35,8 +35,10 @@ const About = () => {
       "
     >
       <div
-        className={`z-[3] top-5 w-full h-[650px] flex items-center justify-center transition-all duration-300 ${
-          yScrollPosition <= 650 ? 'fixed' : 'absolute'
+        className={`z-[3] top-5 w-full h-screen flex items-center justify-center transition-all duration-300 ${
+          state.isReady && yScrollPosition <= (window.innerHeight * 4) / 5
+            ? 'fixed'
+            : 'absolute'
         }`}
       >
         <Banner3d />
@@ -75,7 +77,10 @@ const About = () => {
                 right
                 duration={500}
                 delay={250}
-                when={state.isReady && yScrollPosition > 650}
+                when={
+                  state.isReady &&
+                  yScrollPosition > (window.innerHeight * 4) / 5
+                }
               >
                 <img
                   src="/assets/images/chars/char-owl.png"
@@ -87,7 +92,10 @@ const About = () => {
                 right
                 duration={500}
                 delay={0}
-                when={state.isReady && yScrollPosition > 650}
+                when={
+                  state.isReady &&
+                  yScrollPosition > (window.innerHeight * 4) / 5
+                }
               >
                 <img
                   src="/assets/images/chars/char-frog.png"
@@ -100,7 +108,10 @@ const About = () => {
                 left
                 duration={500}
                 delay={0}
-                when={state.isReady && yScrollPosition > 650}
+                when={
+                  state.isReady &&
+                  yScrollPosition > (window.innerHeight * 4) / 5
+                }
               >
                 <img
                   src="/assets/images/chars/char-fish.png"
@@ -112,7 +123,10 @@ const About = () => {
                 left
                 duration={500}
                 delay={250}
-                when={state.isReady && yScrollPosition > 650}
+                when={
+                  state.isReady &&
+                  yScrollPosition > (window.innerHeight * 4) / 5
+                }
               >
                 <img
                   src="/assets/images/chars/char-bear.png"

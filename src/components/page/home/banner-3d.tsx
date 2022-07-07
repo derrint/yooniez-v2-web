@@ -18,21 +18,50 @@ const Banner3d = () => {
     );
   };
 
+  const degreesToRadians = (degrees: any) => {
+    const pi = Math.PI;
+    return degrees * (pi / 180);
+  };
+
+  const calcWindowHeight = (height: number) => {
+    return (height * 4) / 5;
+  };
+
   // React.useEffect(() => {
-  //   if (yScrollPosition > 650) {
-  //     console.log(-3 + yScrollPosition / 500);
+  //   if (yScrollPosition > calcWindowHeight(window.innerHeight)) {
+  //     const angle = 3 - yScrollPosition / 200;
+  //     const scale = 4 - yScrollPosition / 500;
+  //     const position = -3 + yScrollPosition / 500;
+  //     console.log({ angle, scale, position });
   //   }
   // }, [yScrollPosition]);
 
-  const modelData = {
-    angle: yScrollPosition <= 650 ? 3 - yScrollPosition / 200 : -0.25,
-    scale: yScrollPosition <= 650 ? 4 - yScrollPosition / 500 : 2.7,
-    position: [
-      0,
-      yScrollPosition <= 650 ? -3 + yScrollPosition / 500 : -1.698,
-      0,
-    ],
-  };
+  const modelData =
+    typeof window !== 'undefined'
+      ? {
+          angle:
+            yScrollPosition <= calcWindowHeight(window.innerHeight)
+              ? degreesToRadians(
+                  (yScrollPosition / calcWindowHeight(window.innerHeight)) * 360
+                )
+              : degreesToRadians(0),
+          scale:
+            yScrollPosition <= calcWindowHeight(window.innerHeight)
+              ? 4 - yScrollPosition / calcWindowHeight(window.innerHeight)
+              : 3,
+          position: [
+            0,
+            yScrollPosition <= calcWindowHeight(window.innerHeight)
+              ? -2 - yScrollPosition / calcWindowHeight(window.innerHeight)
+              : -1,
+            0,
+          ],
+        }
+      : {
+          angle: 0,
+          scale: 0,
+          position: [10, 10, 10],
+        };
 
   return (
     <Canvas style={{ height: 550 }}>
@@ -53,8 +82,8 @@ const Banner3d = () => {
           // autoRotateSpeed={6}
           enablePan={false}
           enableZoom={false}
-          minPolarAngle={1.571}
-          maxPolarAngle={1.571}
+          minPolarAngle={degreesToRadians(90)}
+          maxPolarAngle={degreesToRadians(90)}
           minAzimuthAngle={modelData.angle}
           maxAzimuthAngle={modelData.angle}
         />
