@@ -80,7 +80,11 @@ const Traits = () => {
                   <div
                     key={item.id}
                     className={`items-center gap-2 relative flex w-[80%] mb-10 ${
-                      item.id === 2 ? 'ml-32' : item.id === 3 ? 'ml-64' : ''
+                      item.id === 2
+                        ? 'lg:ml-32'
+                        : item.id === 3
+                        ? 'lg:ml-64'
+                        : ''
                     }`}
                   >
                     <img

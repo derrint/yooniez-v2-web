@@ -52,16 +52,16 @@ const Banner = () => {
               </h3>
             </div>
           </Fade>
-          <div className="p-4">
+          <div className="p-2 lg:p-4">
             <Fade top duration={750} delay={500} when={state.isReady}>
-              <h1 className="text-5xl font-headline text-primary">
+              <h1 className="text-2xl lg:text-5xl font-headline text-primary">
                 {text?.second}
               </h1>
             </Fade>
 
             <Fade top duration={750} delay={750} when={state.isReady}>
               <p
-                className="text-sm mt-2 mb-4 text-black max-w-[250px] relative"
+                className="text-xs lg:text-sm mt-1 lg:mt-2 mb-2 lg:mb-4 text-black max-w-[250px] relative"
                 dangerouslySetInnerHTML={{ __html: text?.third }}
               >
                 {}
@@ -70,15 +70,15 @@ const Banner = () => {
             <Fade top duration={750} delay={1000} when={state.isReady}>
               <button
                 className="
-                    px-16 py-2
-                    bg-[url('/assets/images/bgs/bg-banner-text-button.svg')] bg-contain bg-no-repeat
-                    text-2xl font-headline text-white
+                    px-6 lg:px-16 py-2
+                    bg-[url('/assets/images/bgs/bg-banner-text-button.svg')] bg-contain lg:bg-contain bg-no-repeat
+                    text-base lg:text-2xl font-headline text-white
                     mr-32
                   "
                 onClick={() => {}}
               >
                 ENTER
-                <div className="font-sans text-sm font-normal text-secondary">
+                <div className="font-sans text-xs lg:text-sm font-normal text-primary lg:text-secondary mt-2 lg:mt-0">
                   Ends in 10:23:45
                 </div>
               </button>

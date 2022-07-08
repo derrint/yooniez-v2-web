@@ -64,10 +64,10 @@ const About = () => {
           <div>
             <Fade left duration={750} delay={0} when={state.isReady}>
               <div className="text-center">
-                <h1 className="text-xl sm:text-3xl lg:text-8xl lg:leading-[90px] mb-3 lg:mb-5 text-primary font-headline">
+                <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl mb-3 lg:mb-5 text-primary font-headline">
                   7,777
                 </h1>
-                <h3 className="text-md sm:text-lg lg:text-xl mb-3 lg:mb-5 text-black font-headline">
+                <h3 className="text-base md:text-lg lg:text-xl mb-3 lg:mb-5 text-black font-headline">
                   UNIQUE CHARACTERS LIVING IN YOONIVERSE
                 </h3>
               </div>

@@ -27,7 +27,7 @@ const Spotlight = () => {
       <img
         src="/assets/images/vectors/vertical-line-w.svg"
         alt=""
-        className="absolute hidden sm:block left-10 bottom-0 sm:w-5 z-[2]"
+        className="absolute hidden sm:block left-5 lg:left-10 bottom-0 w-4 lg:w-5 z-[2]"
       />
 
       <Modal name="video-player" closeButton={{ color: 'black' }}>
