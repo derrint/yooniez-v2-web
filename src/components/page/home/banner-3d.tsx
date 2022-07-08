@@ -8,7 +8,7 @@ import { useState } from '@overmind/index';
 const Banner3d = () => {
   const { yScrollPosition } = useState();
 
-  const Model = ({ scale = 3.5, position = [0, -3, 0] }) => {
+  const Model = ({ scale = 3.5, position = [0, -2.2, 0] }) => {
     const gltf = useGLTF('./assets/3d/level_char/scene.gltf');
 
     return (
@@ -27,14 +27,13 @@ const Banner3d = () => {
     return (height * 4) / 5;
   };
 
-  // React.useEffect(() => {
-  //   if (yScrollPosition > calcWindowHeight(window.innerHeight)) {
-  //     const angle = 3 - yScrollPosition / 200;
-  //     const scale = 4 - yScrollPosition / 500;
-  //     const position = -3 + yScrollPosition / 500;
-  //     console.log({ angle, scale, position });
-  //   }
-  // }, [yScrollPosition]);
+  React.useEffect(() => {
+    // if (yScrollPosition > calcWindowHeight(window.innerHeight)) {
+    // const position =
+    //   -2 - yScrollPosition / calcWindowHeight(window.innerHeight);
+    // console.log({ position });
+    // }
+  }, [yScrollPosition]);
 
   const modelData =
     typeof window !== 'undefined'
@@ -47,24 +46,16 @@ const Banner3d = () => {
               : degreesToRadians(0),
           scale:
             yScrollPosition <= calcWindowHeight(window.innerHeight)
-              ? 4 - yScrollPosition / calcWindowHeight(window.innerHeight)
-              : 3,
-          position: [
-            0,
-            yScrollPosition <= calcWindowHeight(window.innerHeight)
-              ? -2 - yScrollPosition / calcWindowHeight(window.innerHeight)
-              : -1,
-            0,
-          ],
+              ? 2.9 - yScrollPosition / calcWindowHeight(window.innerHeight)
+              : 1.9,
         }
       : {
           angle: 0,
           scale: 0,
-          position: [10, 10, 10],
         };
 
   return (
-    <Canvas style={{ height: 550 }}>
+    <Canvas>
       <ambientLight intensity={0.6} />
       <spotLight
         intensity={0.5}
@@ -76,7 +67,7 @@ const Banner3d = () => {
       <pointLight position={[-10, -10, -10]} />
 
       <Suspense fallback={null}>
-        <Model scale={modelData.scale / 120} position={modelData.position} />
+        <Model scale={modelData.scale / 120} />
         <OrbitControls
           // autoRotate
           // autoRotateSpeed={6}

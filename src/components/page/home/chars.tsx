@@ -1,3 +1,4 @@
+/* eslint-disable no-nested-ternary */
 /* eslint-disable react-hooks/exhaustive-deps */
 import React from 'react';
 
@@ -35,10 +36,12 @@ const About = () => {
       "
     >
       <div
-        className={`z-[3] top-5 w-full h-screen flex items-center justify-center transition-all duration-300 ${
-          state.isReady && yScrollPosition <= (window.innerHeight * 4) / 5
-            ? 'fixed'
-            : 'absolute'
+        className={`z-[3] top-0 w-full h-screen flex items-center justify-center ${
+          state.isReady
+            ? yScrollPosition <= (window.innerHeight * 4) / 5
+              ? 'fixed'
+              : `absolute -mt-[20vh]`
+            : ''
         }`}
       >
         <Banner3d />
