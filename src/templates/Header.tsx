@@ -170,7 +170,7 @@ const Header = () => {
                 text-xs text-primary
                 font-headline
                 bg-[url('/assets/images/bgs/bg-header-button.svg')] bg-contain bg-no-repeat
-                mr-4
+                lg:mr-4
               "
               onClick={() => {
                 if (!account) {

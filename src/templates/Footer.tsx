@@ -43,14 +43,17 @@ const Footer = () => {
         alt=""
         className="absolute hidden sm:block right-0 -top-20 sm:w-full z-[2]"
       /> */}
-      <Section className="lg:!px-8 grid grid-cols-3 justify-between" isFooter>
-        <div />
+      <Section
+        className="lg:!px-8 grid grid-cols-2 sm:grid-cols-3 justify-between"
+        isFooter
+      >
+        <div className="hidden sm:block" />
         <div className="z-[4] text-center flex flex-col gap-10">
           <div>
             <img
               src="/assets/images/logos/logo-yooniez-purple.svg"
               alt=""
-              className="inline h-12 mx-2 mb-1"
+              className="inline h-6 sm:h-8 lg:h-12 mx-2 mb-1"
             />
           </div>
 

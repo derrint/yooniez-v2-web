@@ -58,14 +58,14 @@ const Traits = () => {
         <img
           src="/assets/images/vectors/diagonal-line-purple.svg"
           alt=""
-          className="absolute hidden sm:block left-[59px] top-0 sm:w-72 z-[2]"
+          className="absolute hidden sm:block left-[35px] lg:left-[59px] top-0 sm:w-72 z-[1]"
         />
         <Section yPadding="pt-8 sm:pt-16">
           <div className="relative flex flex-col justify-center z-[1]">
             <div>
               <Fade left duration={750} delay={0} when={state.isReady}>
                 <div className="text-center">
-                  <h1 className="text-xl sm:text-2xl lg:text-[70px] lg:leading-[100px] mb-2 lg:mb-3 text-black font-headline">
+                  <h1 className="text-2xl sm:text-4xl lg:text-6xl mb-2 lg:mb-3 text-black font-headline">
                     WHAT WE PLAN AHEAD
                   </h1>
                 </div>
@@ -79,7 +79,7 @@ const Traits = () => {
                 {items.map((item: any) => (
                   <div
                     key={item.id}
-                    className={`items-center gap-2 relative flex w-[80%] mb-10 ${
+                    className={`items-center gap-2 relative flex lg:w-[80%] mb-10 ${
                       item.id === 2
                         ? 'lg:ml-32'
                         : item.id === 3
@@ -90,15 +90,15 @@ const Traits = () => {
                     <img
                       src={item.asset}
                       alt=""
-                      className={`h-52 aspect-auto ${
-                        item.id === 1 ? '' : 'mr-8'
+                      className={`h-40 lg:h-52 aspect-auto ${
+                        item.id === 1 ? '' : 'mr-4 lg:mr-8'
                       }`}
                     />
                     <div>
-                      <h2 className="text-primary font-headline text-4xl">
+                      <h2 className="text-primary font-headline text-xl sm:text-2xl lg:text-4xl">
                         {item.title}
                       </h2>
-                      <h3 className="text-black text-base">
+                      <h3 className="text-black text-sm sm:text-base">
                         {item.description}
                       </h3>
                     </div>
