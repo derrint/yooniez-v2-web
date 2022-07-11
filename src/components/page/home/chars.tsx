@@ -88,7 +88,7 @@ const About = () => {
                 <img
                   src="/assets/images/chars/char-owl.png"
                   alt=""
-                  className="absolute mt-4 mr-[340px] h-[200px] -z-[2]"
+                  className="absolute mt-[13vh] sm:mt-4 mr-[60vw] sm:mr-[340px] h-[30vw] sm:h-[200px] -z-[2]"
                 />
               </Fade>
               <Fade
@@ -103,7 +103,7 @@ const About = () => {
                 <img
                   src="/assets/images/chars/char-frog.png"
                   alt=""
-                  className="absolute -mt-5 mr-48 h-[240px] -z-[1]"
+                  className="absolute mt-[10vh] sm:-mt-5 mr-40 sm:mr-48 h-[40vw] sm:h-[240px] -z-[1]"
                 />
               </Fade>
 
@@ -119,7 +119,7 @@ const About = () => {
                 <img
                   src="/assets/images/chars/char-fish.png"
                   alt=""
-                  className="absolute -mt-5 ml-48 h-[240px] -z-[1]"
+                  className="absolute mt-[10vh] sm:-mt-5 ml-40 sm:ml-48 h-[40vw] sm:h-[240px] -z-[1]"
                 />
               </Fade>
               <Fade
@@ -134,7 +134,7 @@ const About = () => {
                 <img
                   src="/assets/images/chars/char-bear.png"
                   alt=""
-                  className="absolute mt-4 ml-80 h-[200px] -z-[2]"
+                  className="absolute mt-[13vh] sm:mt-4 ml-[60vw] sm:ml-80 h-[30vw] sm:h-[200px] -z-[2]"
                 />
               </Fade>
             </div>

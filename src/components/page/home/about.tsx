@@ -29,7 +29,7 @@ const About = () => {
       "
     >
       <Section
-        yPadding="py-8 sm:py-16 lg:py-32"
+        yPadding="py-24 sm:py-16 lg:py-32"
         id="about"
         className="px-12 sm:px-16 lg:px-24 "
       >
@@ -56,7 +56,7 @@ const About = () => {
           <div className="mt-24 lg:mt-56 mb-12 lg:mb-32">
             <Fade left duration={750} delay={0} when={state.isReady}>
               <div className="text-left">
-                <p className="text-xl lg:text-3xl font-light text-white max-w-xl ">
+                <p className="sm:text-xl lg:text-3xl font-light text-white max-w-xl ">
                   Change will not come if we wait for some other person or some
                   other time.
                   <br />
@@ -68,7 +68,7 @@ const About = () => {
                   <img
                     src="/assets/images/logos/logo-yooniez-w.svg"
                     alt=""
-                    className="inline h-4 lg:h-6 mx-2 mb-1"
+                    className="inline h-3 sm:h-4 lg:h-6 ml-2 mb-1"
                   />
                   , a legion of misfits.
                 </p>

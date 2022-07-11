@@ -48,16 +48,16 @@ const Footer = () => {
         isFooter
       >
         <div className="hidden sm:block" />
-        <div className="z-[4] text-center flex flex-col gap-10">
+        <div className="z-[4] sm:text-center flex flex-col gap-3 sm:gap-10">
           <div>
             <img
               src="/assets/images/logos/logo-yooniez-purple.svg"
               alt=""
-              className="inline h-6 sm:h-8 lg:h-12 mx-2 mb-1"
+              className="inline h-4 sm:h-6 md:h-8 lg:h-12 mx-0 sm:mx-2 sm:mb-1"
             />
           </div>
 
-          <div className="flex items-center justify-center gap-2">
+          <div className="flex items-center sm:justify-center gap-2">
             <div className="rounded-md rounded-br-xl p-1 bg-primary text-white">
               <FaTwitter size={16} />
             </div>
@@ -69,7 +69,7 @@ const Footer = () => {
           <span className="text-sm text-black">&copy; 2022 Yooniez</span>
         </div>
         <div className="z-[4] text-right">
-          <h2 className="font-headline text-primary text-lg mb-2">
+          <h2 className="font-headline text-primary text-base sm:text-lg mb-2">
             PUBLIC DOC
           </h2>
           <ul className=" flex flex-col gap-2 justify-start lg:justify-end items-end">
@@ -80,7 +80,9 @@ const Footer = () => {
                   className="flex justify-center items-center gap-3 whitespace-nowrap"
                 >
                   <Link href="/">
-                    <a className="text-sm text-black">{item.label}</a>
+                    <a className="text-xs sm:text-sm text-black">
+                      {item.label}
+                    </a>
                   </Link>
                 </li>
               );

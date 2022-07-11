@@ -65,7 +65,7 @@ const Traits = () => {
             <div>
               <Fade left duration={750} delay={0} when={state.isReady}>
                 <div className="">
-                  <h1 className="text-outline text-2xl sm:text-4xl lg:text-6xl mb-2 lg:mb-3 text-black font-headline">
+                  <h1 className="text-outline text-3xl sm:text-4xl lg:text-6xl mb-2 lg:mb-3 text-black font-headline">
                     MEET
                     <br />
                     THE TEAM
@@ -77,7 +77,7 @@ const Traits = () => {
 
           <div className="relative flex flex-col justify-center z-[1]">
             <Zoom duration={750} delay={250} when={state.isReady}>
-              <div className="mt-10 grid grid-cols-4 gap-6">
+              <div className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-6">
                 {[1, 2, 3, 4].map((item: any) => (
                   <div key={item}>
                     <img
@@ -90,7 +90,7 @@ const Traits = () => {
                   </div>
                 ))}
               </div>
-              <div className="mt-10 grid grid-cols-6 gap-4">
+              <div className="mt-10 grid grid-cols-3 sm:grid-cols-6 gap-4">
                 {[1, 2, 3, 4, 5, 6].map((item: any) => (
                   <div key={item}>
                     <img

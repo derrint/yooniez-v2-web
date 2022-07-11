@@ -65,7 +65,7 @@ const Traits = () => {
             <div>
               <Fade left duration={750} delay={0} when={state.isReady}>
                 <div className="text-center">
-                  <h1 className="text-2xl sm:text-4xl lg:text-6xl mb-2 lg:mb-3 text-black font-headline">
+                  <h1 className="text-3xl sm:text-4xl lg:text-6xl mb-2 lg:mb-3 text-black font-headline">
                     WHAT WE PLAN AHEAD
                   </h1>
                 </div>
@@ -75,11 +75,11 @@ const Traits = () => {
 
           <div className="relative flex flex-col justify-center z-[1]">
             <Zoom duration={750} delay={250} when={state.isReady}>
-              <div className="mt-10 mx-10">
+              <div className="mt-10 mx-5 sm:mx-10">
                 {items.map((item: any) => (
                   <div
                     key={item.id}
-                    className={`items-center gap-2 relative flex lg:w-[80%] mb-10 ${
+                    className={`items-center gap-2 relative flex flex-col sm:flex-row lg:w-[80%] mb-10 ${
                       item.id === 2
                         ? 'lg:ml-32'
                         : item.id === 3
@@ -90,8 +90,8 @@ const Traits = () => {
                     <img
                       src={item.asset}
                       alt=""
-                      className={`h-40 lg:h-52 aspect-auto ${
-                        item.id === 1 ? '' : 'mr-4 lg:mr-8'
+                      className={`w-full sm:w-auto sm:h-40 lg:h-52 aspect-auto ${
+                        item.id === 1 ? '' : 'pr-8 sm:pr-0 sm:mr-4 lg:mr-8'
                       }`}
                     />
                     <div>
